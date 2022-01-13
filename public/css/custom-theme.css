@@ -1,0 +1,148 @@
+.main-content {
+    transition: 0.5s all ease;
+    padding-left: 65px !important;
+    padding-top: 65px !important;
+    background-color: white;
+}
+
+.main-content-no-sidebar {
+    transition: 0.5s all ease;
+    padding-left: 0px !important;
+    padding-top: 65px !important;
+    background-color: white;
+}
+
+.left-sidebar {
+    transition: 0.5s;
+    left: 0;
+    position: fixed !important;
+    background: #f9f9f9 !important;
+}
+
+#sidebarnav {
+    background: #f9f9f9 !important;
+}
+
+.hide-sidebar {
+    transition: 0.5s;
+    left: -65px !important;
+}
+
+.top-nav {
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.top-nav .account {
+    display: contents;
+}
+
+.top-nav .account .profile {
+    display: grid;
+    text-align: right;
+}
+
+.top-nav .account .profile .name {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.top-nav .account .profile a {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+}
+
+.sidebar-toggler {
+    width: 65px;
+    background-color: #606060;
+    justify-content: center;
+}
+
+.sidebar-toggler a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.sidebar-toggler a i {
+    position: absolute;
+    display: block;
+}
+
+.toggle-hover-icon {
+    transform: rotate(0deg) scale(1) !important;
+    opacity: 1 !important;
+}
+
+.toggle-default-icon {
+    transform: rotate(180deg) scale(0.5) !important;
+    opacity: 0 !important;
+}
+
+.icon-default {
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.icon-hover {
+    transition: opacity 0.3s, transform 0.3s;
+    transform: rotate(-180deg) scale(0.5);
+    opacity: 0;
+}
+
+.scroll-sidebar {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.scroll-sidebar::-webkit-scrollbar {
+    display: none;
+  }
+
+.theme-border {
+    border: 1px solid #e7e7e7;
+}
+
+.theme-border-black {
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.footer {
+    z-index: 11;
+    position: relative;
+    background: white;
+    border-top: 1px solid #e7e7e7;
+}
+
+.shortcut {
+    color: black;
+}
+
+.shortcut div {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.shortcut div:hover {
+    background-color: #f7f7f7;
+}
+
+@media (max-width: 767px) {
+    #main-wrapper[data-sidebartype=mini-sidebar] .left-sidebar {
+        left: 0;
+        width: 65px !important;
+    }
+
+    #main-wrapper[data-layout="vertical"][data-sidebartype="mini-sidebar"] .sidebar-nav .hide-menu {
+        display: none;
+    }
+}
+
